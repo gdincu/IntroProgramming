@@ -1,9 +1,23 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace IntroProgramming_Curs5
 {
+    class car
+    {
+        public int id { get; set; }
+        public int year { get; set; }
+        public string name { get; set; }
+        public car(int id,int year,string name)
+        {
+            this.id = id;
+            this.year = year;
+            this.name = name;
+        }
+    }
+
     class Program
     {
         static void PrintIntArray(int[] a,string t)
@@ -70,6 +84,31 @@ namespace IntroProgramming_Curs5
             PrintList(null, list3, "\nList of characters before updating the 3rs character to x: ");
             list3[2] = 'x';
             PrintList(null, list3, "\nList of characters after updating the 3rs character to x: ");
+
+            List<car> temp = new List<car>();
+            car A = new car(1,2,"A");
+            temp.Add(A);
+
+            int[] tt1 = new int[2] { 1, 2 };
+            int[] tt2 = tt1;
+            tt1[0] = 5;
+            tt2[0] = 10;
+
+            Console.WriteLine("\n");
+
+            
+
+            var arlist1 = new ArrayList();
+            arlist1.Add(1);
+            arlist1.Add("Bill");
+            arlist1.Add(" ");
+            arlist1.Add(true);
+            arlist1.Add(4.5);
+            arlist1.Add(null);
+
+            
+
+
 
             Console.ReadKey();
         }
